@@ -1,0 +1,203 @@
+1) Method overloading is in the class having more than one same method name with different parameter.
+
+class Person{
+static void  personInfo()
+{
+System.out.println("Invoking personInfo in person");
+String name="Rachana";
+String email="rachana@gmail.com";
+System.out.println("Name of the person :"+name);
+System.out.println("Email :"+email);
+}
+static void personInfo(long phoneNo,String address)
+{
+System.out.println("Person phoneNumber :"+phoneNo);
+System.out.println("Person address :"+address);
+}
+}
+
+class PersonMain{
+public static void main(String[] args)
+{
+System.out.println("Invoking main in PersonMain");
+Person.personInfo();
+Person.personInfo(8878677676l,Rajajinagar);
+}
+
+
+2).Variables are containers which can be used to store data or information.
+declaration of variable:
+
+Datatype variableName=Value;
+
+types of variable:
+1.Local variable = Local variables are declared in inside the method.
+2.Instance variable = Instance variables are non static variables which can be declared inside the class but outside the method.
+3.Static variable = Using static keyword static variables are declared inside the class but outside the method.
+
+Example:
+
+class IceCreameInfo{
+
+static String name;
+static String color;
+double price;
+String flavour;
+
+void Icecreame(double price,String flavour)
+{
+	System.out.println("Icecreame price :"+price);
+	System.out.println("Icecreame flavour :"+flavour);
+}
+static{
+name="ConeIce";
+color="pink";
+}
+static void printStatic()
+{
+System.out.println("Icecreame name :"+name);
+System.out.println("Icecreame color :"color);
+}
+void printInstance()
+{
+System.out.println("Icecreame price :"+price);
+System.out.println("Icecreame flavour :"+flavour);
+}
+}
+
+
+class IceCreameMain{
+
+public static void main(String[] args)
+{
+System.out.println("Invoking main in icecreamemain");
+IceCreame icecreame=new IceCreame(25,"Stroberry");
+IceCreame.printStatic();
+IceCreame.printInstance();
+}
+}
+
+
+3) Heap 					stack memory
+Heap is memory 				Stack memory is also memory which is their in
+						inside the heap.
+
+In the heap memory the class	In the program if main function is their the heap will
+will be stored in the memory	create the stack.
+
+
+
+4) 
+class Mobile{
+
+static void MobileName()
+{
+	System.out.println("Invoking mobilename in mobile");
+}
+static void MobileName(String brand, double price)
+{
+	System.out.println("Brand :"+brand);
+	System.out.println("Price :"+price);
+	this.brand=brand;
+	this.price=price;
+}
+}
+
+class MobileInfo{
+public static void main(String[] args)
+{
+System.out.println("Invoking mobilename in mobile");
+Mobile mobile=new Mobile();
+System.out.println(mobile.brand);
+System.out.println(mobile.price);
+
+mobile.brand="ViVo";
+mobile.price=12000;
+System.out.println(mobile.brand);
+System.out.println(mobile.price);
+}
+}
+
+
+
+7)Construcor chaining 
+
+class Jacket{
+
+String brand;
+double price;
+String color;
+
+Jacket()
+{
+	System.out.println("Invoking the Jacket");
+}
+ Jacket(String brand, double price,String color)
+{
+	this(brand,price);
+	System.out.println("Jacket Brand :"+brand);
+	System.out.println("Jacket price :"+price);
+	this.color=color;
+}
+
+
+class JacketRunner{
+public static void main(String[] args)
+{
+	System.out.println("Invoking main in jacketRunner");
+	Jacket jacket=new Jacket("Rayon",2500.00,"black");
+	System.out.prinln(jacket.brand);
+	System.out.prinln(jacket.price);
+	System.out.prinln(jacket.color);
+}
+}
+
+6)class Chocolate{
+
+static String name;
+static String color;
+double price;
+String flavour;
+
+void Chocolate(double price,String flavour)
+{
+	System.out.println("Chocolate :"+price);
+	System.out.println("Chocolate flavour :"+flavour);
+}
+static{
+name="dairymilk";
+color="black";
+}
+static void printStatic()
+{
+System.out.println("Chocolate name :"+name);
+System.out.println("Chocolate color :"color);
+}
+void printInstance()
+{
+System.out.println("Chocolate price :"+price);
+System.out.println("Chocolate flavour :"+flavour);
+}
+}
+
+
+class ChocolateMain{
+
+public static void main(String[] args)
+{
+System.out.println("Invoking main in Chocolatemain");
+Chocolate chocolate=new Chocolate(25,"chocolate");
+Chocolate.printStatic();
+Chocolate.printInstance();
+}
+} 
+	
+
+
+
+
+ 
+
+
+
+
